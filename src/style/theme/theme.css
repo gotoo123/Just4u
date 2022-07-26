@@ -1,0 +1,12 @@
+@import "dark.css";
+@import "light.css";
+
+.box {
+  height: 20px;
+  width: 20px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: grey;
+  cursor: pointer;;
+}
