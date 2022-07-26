@@ -11,7 +11,7 @@ const Header = () => {
         <div className="header-logo">Just4u</div>
         <div className="header-nav">
           {navList.map(item =>
-            <span className="nav-item">{item}</span>
+            <span className="nav-item" key={item}>{item}</span>
           )}
         </div>
 

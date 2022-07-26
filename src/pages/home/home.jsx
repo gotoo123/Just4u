@@ -1,4 +1,5 @@
 import Header from '../../component/header/header'
+import Footer from "../../component/footer/footer";
 import Wave from '../../component/wave/wave'
 import './home.css'
 const Home = () => {
@@ -20,6 +21,8 @@ const Home = () => {
         <section className="content-container">
 
         </section>
+
+        <Footer/>
       </div>
 
 
