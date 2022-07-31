@@ -10,3 +10,8 @@
   background-color: grey;
   cursor: pointer;;
 }
+
+.box.change-lang {
+  bottom: 50px;
+  background-color: darkslategray;
+}

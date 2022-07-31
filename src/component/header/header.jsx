@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './header.css';
+import LocaleContext from "../locale-provider/context";
 
 const Header = () => {
-
-  const navList = ['HOME', 'SEARCH'];
+  const value = useContext(LocaleContext);
+  const navList = Object.values(value);
 
   return (
     <>
