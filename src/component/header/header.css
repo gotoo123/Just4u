@@ -22,3 +22,11 @@
   margin: 0 20px;
   color: white;
 }
+
+.nav-item:hover {
+  color: darkgrey;
+}
+
+a {
+  text-decoration: none;
+}
