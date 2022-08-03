@@ -9,7 +9,8 @@
     "lint-fix": "eslint src/**/*.{js,jsx} --fix",
     "prettier": "prettier --write .",
     "format": "npm run lint-fix && npm run prettier",
-    "clean": "rm -rf node_modules"
+    "clean": "rm -rf node_modules",
+    "md2html": "node src/scripts/md2html.js"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +30,7 @@
     "eslint-plugin-react": "^7.30.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "marked": "^4.0.18",
     "prettier": "2.7.1",
     "react-router-dom": "^6.3.0",
     "style-loader": "^3.3.1",
