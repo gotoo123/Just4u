@@ -1,6 +1,6 @@
 const en = {
   home: 'HOME',
   search: 'SEARCH',
-  lab: 'LAB'
+  lab: 'LAB',
 };
 export default en;

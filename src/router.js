@@ -18,7 +18,7 @@ const router = [
   {
     path: '/lab',
     component: Lab,
-  }
+  },
 ];
 
 export default router;
