@@ -46,4 +46,7 @@
 .content-container {
   height: 100%;
   background-color: var(--backgroud);
+  display: flex;
+  justify-content: center;
+  padding: 60px;
 }

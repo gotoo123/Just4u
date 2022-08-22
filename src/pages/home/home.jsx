@@ -1,6 +1,7 @@
 import Header from '../../component/header/header';
 import Footer from '../../component/footer/footer';
 import Wave from '../../component/wave/wave';
+import BlogList from '../../component/blog/blogList/blogList'
 import './home.css';
 const Home = () => {
   return (
@@ -14,12 +15,14 @@ const Home = () => {
           </div>
           <Wave />
         </header>
-        <section className="content-container"></section>
-
+        <section className="content-container">
+          <BlogList/>
+        </section>
         <Footer />
       </div>
+
     </>
   );
 };
 
-export default Home();
+export default Home;
