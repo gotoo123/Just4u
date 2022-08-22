@@ -1,23 +1,28 @@
 import Home from './pages/home/home';
 import Search from './pages/search/search';
 import Lab from './pages/lab/lab';
+import Blog from './component/blog/blog';
 
 const router = [
   {
     path: '/',
-    component: Home,
+    element: <Home />,
   },
   {
     path: '/home',
-    component: Home,
+    element: <Home />
   },
   {
     path: '/search',
-    component: Search,
+    element: <Search />,
   },
   {
     path: '/lab',
-    component: Lab,
+    element: <Lab />,
+  },
+  {
+    path: '/blog/:id',
+    element: <Blog />
   },
 ];
 

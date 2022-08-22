@@ -4,4 +4,4 @@ const Search = () => {
   return <div>this is search</div>;
 };
 
-export default Search();
+export default Search;
