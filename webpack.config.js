@@ -6,20 +6,34 @@ module.exports = {
   entry: {
     main: './src/main.jsx',
   },
+  context: path.join(__dirname, '.'),
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/i,
         exclude: /(node_modules)/,
-        use: 'babel-loader',
+        use: ['babel-loader', './loader/class2style.js'],
       },
       {
-        test: /\.svg$/i,
+        test: /\.(svg|jpeg)$/i,
         use: 'file-loader',
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        exclude: /(node_modules)/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: "[local]-[hash:5]"
+              }
+            }
+          },
+        ]
       },
       {
         test: /\.md$/i,

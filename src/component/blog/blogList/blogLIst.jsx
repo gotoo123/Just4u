@@ -3,7 +3,7 @@ import blogConfig from "../blog.config";
 
 const BlogList = () => {
   return (
-    <div className="blog-list-wrap">
+    <div>
       {
         blogConfig.map(item => <BlogItem title={item.title} md={item.md}/>)
       }

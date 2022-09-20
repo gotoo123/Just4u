@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <div className="footer-wrapper">
-      <div className="link-list">
+      <div>
         {link.map((item) => {
           return (
             <div className="link-item" key={item.icon}>
