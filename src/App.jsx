@@ -21,7 +21,7 @@ const App = () => {
     <LocaleContext.Provider value={lang}>
       <main className={`theme-${theme}`}>
         {useRoutes(router)}
-        <Outlet/>
+        <Outlet />
         <div className="box" onClick={changeTheme} />
         <div className="box change-lang" onClick={changeLang} />
       </main>

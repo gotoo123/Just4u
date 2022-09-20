@@ -8,7 +8,7 @@
 
 .header-content.header-content-font-black {
   border-bottom: 1px solid #dfdfdf;
-  box-shadow: 0 2px 8px 0 rgba(0, 9, 41, .12);
+  box-shadow: 0 2px 8px 0 rgba(0, 9, 41, 0.12);
 }
 
 .header-content.header-content-font-black .nav-item {

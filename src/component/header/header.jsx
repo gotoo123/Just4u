@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './header.css';
 import LocaleContext from '../locale-provider/context';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Header = (props) => {
   const res = useContext(LocaleContext);
@@ -28,6 +29,10 @@ const Header = (props) => {
       </div>
     </>
   );
+};
+
+Header.propTypes = {
+  theme: PropTypes.string,
 };
 
 export default Header;

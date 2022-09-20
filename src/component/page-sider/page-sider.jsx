@@ -5,7 +5,7 @@ const PageSider = (props) => {
   const { title, menu } = props;
   return menu.map((item) => {
     return (
-      <div className="page-sider-wrapper">
+      <div key={item.name} className="page-sider-wrapper">
         <div className="page-sider-title">{title}</div>
         <div className="page-sider-list">
           <Link to={item.route}>

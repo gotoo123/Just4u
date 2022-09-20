@@ -11,7 +11,7 @@ const router = [
   },
   {
     path: '/home',
-    element: <Home />
+    element: <Home />,
   },
   {
     path: '/search',
@@ -24,7 +24,7 @@ const router = [
   },
   {
     path: '/blog/:id',
-    element: <Blog />
+    element: <Blog />,
   },
 ];
 

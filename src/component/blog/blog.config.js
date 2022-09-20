@@ -4,12 +4,12 @@ import tools from '../../assets/md/tools.md';
 const blogConfig = [
   {
     title: 'note',
-    md: note
+    md: note,
   },
   {
     title: 'tools',
-    md: tools
-  }
-]
+    md: tools,
+  },
+];
 
 export default blogConfig;

@@ -29,17 +29,16 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: {
-                localIdentName: "[local]-[hash:5]"
-              }
-            }
+                localIdentName: '[local]-[hash:5]',
+              },
+            },
           },
-        ]
+        ],
       },
       {
         test: /\.md$/i,
         use: ['html-loader', 'markdown-loader'],
-      }
-
+      },
     ],
   },
   plugins: [
