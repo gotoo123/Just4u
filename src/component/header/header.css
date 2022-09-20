@@ -6,8 +6,16 @@
   padding: 0 15px;
 }
 
+.header-content.header-content-font-black {
+  border-bottom: 1px solid #dfdfdf;
+  box-shadow: 0 2px 8px 0 rgba(0, 9, 41, .12);
+}
+
+.header-content.header-content-font-black .nav-item {
+  color: black;
+}
+
 .header-logo {
-  color: white;
   font-weight: 700;
   font-size: 20px;
 }

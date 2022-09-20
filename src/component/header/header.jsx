@@ -3,7 +3,7 @@ import './header.css';
 import LocaleContext from '../locale-provider/context';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = (props) => {
   const res = useContext(LocaleContext);
   const list = [];
   Object.keys(res).forEach((key) => {
@@ -12,7 +12,11 @@ const Header = () => {
 
   return (
     <>
-      <div className="header-content">
+      <div
+        className={`header-content ${
+          props.theme === 'black' ? 'header-content-font-black' : ''
+        }`}
+      >
         <div className="header-logo">Just4u</div>
         <div className="header-nav">
           {list.map((item) => (

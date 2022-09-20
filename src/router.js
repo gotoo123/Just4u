@@ -2,6 +2,7 @@ import Home from './pages/home/home';
 import Search from './pages/search/search';
 import Lab from './pages/lab/lab';
 import Blog from './component/blog/blog';
+import { router as labRouter } from './pages/lab/router';
 
 const router = [
   {
@@ -19,6 +20,7 @@ const router = [
   {
     path: '/lab',
     element: <Lab />,
+    children: labRouter,
   },
   {
     path: '/blog/:id',
