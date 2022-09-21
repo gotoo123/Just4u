@@ -6,31 +6,31 @@ const Test = () => {
       <div className="wrapper">
         <div className="button">
           <div className="icon">
-            <i></i>
+            <i>G</i>
           </div>
           <span>Facebook </span>
         </div>
         <div className="button">
           <div className="icon">
-            <i></i>
+            <i>O</i>
           </div>
           <span>Twitter</span>
         </div>
         <div className="button">
           <div className="icon">
-            <i></i>
+            <i>T</i>
           </div>
           <span>Instagram</span>
         </div>
         <div className="button">
           <div className="icon">
-            <i></i>
+            <i>O</i>
           </div>
           <span>Github</span>
         </div>
         <div className="button">
           <div className="icon">
-            <i></i>
+            <i>O</i>
           </div>
           <span>YouTube</span>
         </div>
