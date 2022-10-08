@@ -11,11 +11,13 @@
   box-shadow: 0 2px 8px 0 rgba(0, 9, 41, 0.12);
 }
 
-.header-content.header-content-font-black .nav-item {
+.header-content.header-content-font-black .nav-item,
+.header-content.header-content-font-black .header-logo {
   color: black;
 }
 
 .header-logo {
+  color: white;
   font-weight: 700;
   font-size: 20px;
 }

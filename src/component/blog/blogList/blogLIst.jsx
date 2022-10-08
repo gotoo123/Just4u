@@ -5,7 +5,7 @@ const BlogList = () => {
   return (
     <div>
       {blogConfig.map((item) => (
-        <BlogItem key={item.title} title={item.title} md={item.md} />
+        <BlogItem key={item.title} desc={item.desc} intro={item.intro} title={item.title} md={item.md} />
       ))}
     </div>
   );
