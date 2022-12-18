@@ -1,20 +1,22 @@
 import { Link } from 'react-router-dom';
-import './page-sider.css';
+import style from './page-sider.less';
 
 const PageSider = (props) => {
   const { title, menu } = props;
-  return menu.map((item) => {
     return (
-      <div key={item.name} className="page-sider-wrapper">
+      <div className={`${style.pageSiderWrapper}`}>
         <div className="page-sider-title">{title}</div>
         <div className="page-sider-list">
-          <Link to={item.route}>
-            <div className="page-sider-item">{item.name}</div>
-          </Link>
+          {
+            menu.map(item =>
+              <Link to={item.route} key={item.name}>
+                <div className="page-sider-item">{item.name}</div>
+              </Link>
+            )
+          }
         </div>
       </div>
     );
-  });
 };
 
 export default PageSider;

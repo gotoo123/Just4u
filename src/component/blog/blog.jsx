@@ -1,7 +1,7 @@
 import Markdown from '../markdown/markdown';
 import { useLocation } from 'react-router-dom';
 import blogConfig from './blog.config';
-import './blog.css';
+import style from './blog.less';
 
 const Blog = () => {
   const location = useLocation();
@@ -13,7 +13,7 @@ const Blog = () => {
     }
   });
   return (
-    <div className="markdown-wrap">
+    <div className={`${style.markdownWrap}`}>
       <Markdown md={md} />
     </div>
   );

@@ -1,8 +1,8 @@
-import './wave.css';
+import style from './wave.less';
 const Wave = () => {
   return (
     <>
-      <div className="preview-wave">
+      <div className={`${style.wrapper}`}>
         <svg
           className="preview-waves"
           xmlns="http://www.w3.org/2000/svg"

@@ -1,5 +1,6 @@
 import BlogItem from '../blogItem/blogItem';
 import blogConfig from '../blog.config';
+import style from './blogList.less';
 
 const BlogList = () => {
   return (

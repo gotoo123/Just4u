@@ -1,12 +1,13 @@
-import './footer.css';
 import { link } from './link';
+import style from './footer.less';
+
 const Footer = () => {
   const handleClick = (href) => {
     window.location.href = href;
   };
 
   return (
-    <div className="footer-wrapper">
+    <div className={`${style.footerWrapper}`}>
       <div>
         {link.map((item) => {
           return (

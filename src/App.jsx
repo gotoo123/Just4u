@@ -4,6 +4,7 @@ import router from './router';
 import './style/theme/theme.css';
 import LocaleContext from './component/locale-provider/context';
 import { en, zh } from './component/locale/locale';
+import style from './App.less';
 
 const App = () => {
   const [theme, setTheme] = useState('dark');
@@ -19,7 +20,7 @@ const App = () => {
 
   return (
     <LocaleContext.Provider value={lang}>
-      <main className={`theme-${theme}`}>
+      <main className={`${style.wrapper} theme-${theme}`}>
         {useRoutes(router)}
         <Outlet />
         <div className="box" onClick={changeTheme} />

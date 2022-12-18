@@ -12,7 +12,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/i,
         exclude: /(node_modules)/,
-        use: ['babel-loader', './loader/class2style.js'],
+        use: ['babel-loader'],
       },
       {
         test: /\.(svg|jpeg)$/i,
@@ -33,6 +33,27 @@ module.exports = {
               },
             },
           },
+        ],
+      },
+
+      {
+        test: /\.less$/i,
+        exclude: /(node_modules)/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[local]-[hash:5]',
+              },
+            },
+          },
+          {
+            loader: 'less-loader',
+          }
         ],
       },
       {

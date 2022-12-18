@@ -2,11 +2,11 @@ import Header from '../../component/header/header';
 import Footer from '../../component/footer/footer';
 import Wave from '../../component/wave/wave';
 import BlogList from '../../component/blog/blogList/blogList';
-import './home.css';
+import style from  './home.less';
 const Home = () => {
   return (
     <>
-      <div className="wrapper">
+      <div className={`${style.wrapper}`}>
         <header className="header-container">
           <Header />
           <div className="content">
