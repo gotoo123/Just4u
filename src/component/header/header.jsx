@@ -19,13 +19,21 @@ const Header = (props) => {
                 props.theme === 'black' ? 'header-content-font-black' : ''
             }`}
         >
-          <div className="header-logo">Just4u</div>
+          <Link to={`/home`}>
+            <div className="header-logo">Just4u</div>
+          </Link>
           <div className="header-nav">
-            {list.map((item) => (
-                <Link to={`/${item[0]}`} key={item[0]}>
+            {list.map((item) => {
+              let linkTo = item[0];
+              if(item[0] === 'lab') {
+                linkTo = 'lab/test';
+              }
+              return (
+                <Link to={`/${linkTo}`} key={item[0]}>
                   <span className="nav-item">{item[1]}</span>
                 </Link>
-            ))}
+              )
+            })}
           </div>
         </div>
       </div>

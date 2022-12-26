@@ -4,7 +4,7 @@ import style from './blogList.less';
 
 const BlogList = () => {
   return (
-    <div>
+    <div className={`${style.blogListWrap}`}>
       {blogConfig.map((item) => (
         <BlogItem key={item.title} desc={item.desc} intro={item.intro} title={item.title} md={item.md} />
       ))}
