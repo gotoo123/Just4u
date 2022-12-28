@@ -13,8 +13,6 @@ const BlogItem = (props) => {
               <div className="desc">{desc}</div>
               <div className="intro">{intro}</div>
             </div>
-
-            <div className="divider" />
           </div>
         </Link>
       </div>

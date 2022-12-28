@@ -1,17 +1,20 @@
 import { useState } from 'react';
 import { useRoutes, Outlet } from 'react-router-dom';
 import router from './router';
-import './style/theme/theme.css';
 import LocaleContext from './component/locale-provider/context';
 import { en, zh } from './component/locale/locale';
 import style from './App.less';
+import globalStyle from './style/theme/theme.less';
+import sun from './assets/icon/sun.svg';
+import moon from './assets/icon/moon.svg';
+
 
 const App = () => {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('Dark');
   const [lang, setLang] = useState(en);
 
   const changeTheme = () => {
-    theme === 'dark' ? setTheme('light') : setTheme('dark');
+    theme === 'Dark' ? setTheme('Light') : setTheme('Dark');
   };
 
   const changeLang = () => {
@@ -20,11 +23,19 @@ const App = () => {
 
   return (
     <LocaleContext.Provider value={lang}>
-      <main className={`${style.wrapper} theme-${theme}`}>
+      <main className={`${style.wrapper} ${globalStyle[`theme${theme}`]}`}>
         {useRoutes(router)}
         <Outlet />
-        <div className="box" onClick={changeTheme} />
-        <div className="box change-lang" onClick={changeLang} />
+        <div className="box" onClick={changeTheme} >
+          {
+            theme === 'Dark' ? <img src={sun} alt="sun" className={`theme-icon-sun`}/> : <img src={moon} alt="moon"/>
+          }
+        </div>
+        <div className="box change-lang" onClick={changeLang} >
+          {
+            lang === en ? <span>zh</span> : <span>en</span>
+          }
+        </div>
       </main>
     </LocaleContext.Provider>
   );
