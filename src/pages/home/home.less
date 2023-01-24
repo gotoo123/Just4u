@@ -35,6 +35,17 @@
   .content .description {
     color: white;
     font-weight: 100;
+    height: 20px;
+    overflow: hidden;
+
+    > div {
+      transition: all 0.5s;
+    }
+
+    > div > div {
+      height: 20px;
+      text-align: center;
+    }
   }
 
   .content-container {
