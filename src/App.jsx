@@ -7,6 +7,7 @@ import style from './App.less';
 import globalStyle from './style/theme/theme.less';
 import sun from './assets/icon/sun.svg';
 import moon from './assets/icon/moon.svg';
+import Header from "./component/header/header";
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
   return (
     <LocaleContext.Provider value={lang}>
       <main className={`${style.wrapper} ${globalStyle[`theme${theme}`]}`}>
+        <Header theme={'black'}/>
         {useRoutes(router)}
         <Outlet />
         <div className="box" onClick={changeTheme} >

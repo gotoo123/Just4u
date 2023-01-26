@@ -2,7 +2,6 @@ import Markdown from '../markdown/markdown';
 import { useLocation } from 'react-router-dom';
 import blogConfig from './blog.config';
 import style from './blog.less';
-import Header from "../header/header";
 import ArrowLeft from '../../assets/icon/arrow-left.svg';
 import {useNavigate} from "react-router";
 
@@ -17,19 +16,20 @@ const Blog = () => {
     }
   });
 
-
   function backStep() {
     navigate('/home');
   }
 
   return (
     <>
-      <Header theme="black" />
       <div className={`${style.markdownWrap}`}>
-        <Markdown md={md} />
+        <div className={`markdownContainer`}>
+          <Markdown md={md} />
+        </div>
       </div>
+
       <div className={style.backStep} onClick={backStep}>
-        <img src={ArrowLeft}/>
+        <img alt="back" src={ArrowLeft}/>
         <span>返回</span>
       </div>
     </>

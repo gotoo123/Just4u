@@ -1,4 +1,3 @@
-import Header from '../../component/header/header';
 import Footer from '../../component/footer/footer';
 import Wave from '../../component/wave/wave';
 import BlogList from '../../component/blog/blogList/blogList';
@@ -15,10 +14,12 @@ const Home = () => {
 
   const [pos, setPos] = useState(0);
 
+  // 设置首页字幕滚动定时器
   useEffect(() => {
     setTimeout(increase, 3000)
     return clearTimeout(increase);
-  })
+  });
+
   const increase = () => {
     if (pos >= (PHRASES.length - 1) * 20) {
       setPos(0);
@@ -31,7 +32,7 @@ const Home = () => {
     <>
       <div className={`${style.wrapper}`}>
         <header className="header-container">
-          <Header />
+          <div/>
           <div className="content">
             <div className="title">Just4u</div>
             <div className="description">
