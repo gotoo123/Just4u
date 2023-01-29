@@ -25,7 +25,7 @@ const App = () => {
   return (
     <LocaleContext.Provider value={lang}>
       <main className={`${style.wrapper} ${globalStyle[`theme${theme}`]}`}>
-        <Header theme={'black'}/>
+        <Header theme={theme.toLowerCase()}/>
         {useRoutes(router)}
         <Outlet />
         <div className="box" onClick={changeTheme} >
