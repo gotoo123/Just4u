@@ -2,31 +2,9 @@ import Footer from '../../component/footer/footer';
 import Wave from '../../component/wave/wave';
 import BlogList from '../../component/blog/blogList/blogList';
 import style from  './home.less';
-import {useEffect, useState} from "react";
-
-const PHRASES = [
-  'No Pain No Gain',
-  'Always Know Who You Are',
-  'Nothing As Bad As Uncertainty'
-]
+import RollPhrase from "../../component/roll-phrase/index";
 
 const Home = () => {
-
-  const [pos, setPos] = useState(0);
-
-  // 设置首页字幕滚动定时器
-  useEffect(() => {
-    setTimeout(increase, 3000)
-    return clearTimeout(increase);
-  });
-
-  const increase = () => {
-    if (pos >= (PHRASES.length - 1) * 20) {
-      setPos(0);
-    } else {
-      setPos(pos + 20);
-    }
-  }
 
   return (
     <>
@@ -36,11 +14,7 @@ const Home = () => {
           <div className="content">
             <div className="title">Just4u</div>
             <div className="description">
-              <div style={{transform: `translateY(-${pos}px)`}}>
-                {
-                  PHRASES.map(item => (<div key={item}>{item}</div>))
-                }
-              </div>
+              <RollPhrase />
             </div>
           </div>
           <Wave />
