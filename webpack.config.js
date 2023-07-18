@@ -69,6 +69,16 @@ module.exports = {
   ],
   devServer: {
     static: './dist',
+    proxy: {
+      '/api': {
+        // target: 'http://51.158.151.96:8888/',
+        target: 'http://localhost:3000/',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': '',
+        }
+      }
+    }
   },
   devtool: 'inline-source-map',
   output: {

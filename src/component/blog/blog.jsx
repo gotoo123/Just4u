@@ -1,23 +1,26 @@
 import Markdown from '../markdown/markdown';
 import { useLocation } from 'react-router-dom';
-import blogConfig from './blog.config';
 import style from './blog.less';
 import ArrowLeft from '../../assets/icon/arrow-left.svg';
-import {useNavigate} from "react-router";
+import {useState, useEffect} from 'react';
+import {axiosGet} from "../../api";
 
 const Blog = () => {
   const location = useLocation();
   const title = location.pathname.replace('/blog/', '');
-  const navigate = useNavigate();
-  let md;
-  blogConfig.forEach((item) => {
-    if (item.title === title) {
-      md = item.md;
-    }
-  });
+  const [md, setMd] = useState('');
+
+  useEffect(() => {
+    axiosGet(`/api/note/${title}`)
+      .then((res) => {
+      setMd(res.data);
+    })
+      .catch((err) => {
+      console.log(err)
+    })
+  })
 
   function backStep() {
-    navigate('/home');
   }
 
   return (

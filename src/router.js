@@ -7,10 +7,6 @@ import {Navigate} from "react-router-dom";
 
 const router = [
   {
-    path: '/',
-    element: <Navigate to={`/home`}/>,
-  },
-  {
     path: '/home',
     element: <Home />,
   },
@@ -26,6 +22,10 @@ const router = [
   {
     path: '/blog/:id',
     element: <Blog />,
+  },
+  {
+    path: '/',
+    element: <Navigate to={`/home`}/>,
   },
 ];
 

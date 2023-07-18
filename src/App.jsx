@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useRoutes, Outlet } from 'react-router-dom';
+import { useRoutes } from 'react-router-dom';
 import router from './router';
 import LocaleContext from './component/locale-provider/context';
 import { en, zh } from './component/locale/locale';
@@ -27,7 +27,6 @@ const App = () => {
       <main className={`${style.wrapper} ${globalStyle[`theme${theme}`]}`}>
         <Header theme={theme.toLowerCase()}/>
         {useRoutes(router)}
-        <Outlet />
         <div className="box" onClick={changeTheme} >
           {
             theme === 'Dark' ? <img src={sun} alt="sun" className={`theme-icon-sun`}/> : <img src={moon} alt="moon"/>

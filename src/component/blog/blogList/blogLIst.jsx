@@ -1,8 +1,21 @@
 import BlogItem from '../blogItem/blogItem';
-import blogConfig from '../blog.config';
 import style from './blogList.less';
+import {useEffect, useState} from "react";
+import {axiosGet} from "../../../api";
 
 const BlogList = () => {
+  const [blogConfig, setBlogConfig] = useState([]);
+
+  useEffect(() => {
+    axiosGet(`/api/list`)
+      .then((res) => {
+      setBlogConfig(res.data);
+    })
+      .catch(err => {
+        console.log(err);
+      })
+  },[])
+
   return (
     <div className={`${style.blogListWrap}`}>
       {blogConfig.map((item) => (
