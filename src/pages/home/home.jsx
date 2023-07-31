@@ -1,6 +1,6 @@
 import Footer from '../../component/footer/footer';
 import Wave from '../../component/wave/wave';
-import BlogList from '../../component/blog/blogList/blogList';
+import BlogList from '../../component/blog/blogList/blog-list';
 import style from  './home.less';
 import RollPhrase from "../../component/roll-phrase/index";
 

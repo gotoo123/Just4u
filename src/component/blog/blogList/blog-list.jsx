@@ -1,5 +1,5 @@
-import BlogItem from '../blogItem/blogItem';
-import style from './blogList.less';
+import BlogItem from '../blogItem/blog-item';
+import style from './blog-list.less';
 import {useEffect, useState} from "react";
 import {axiosGet} from "../../../api";
 

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import style from './blogItem.less';
+import style from './blog-item.less';
 
 const BlogItem = (props) => {
   const { title, desc, intro } = props;
