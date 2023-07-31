@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    main: './src/main.jsx',
+    main: path.resolve(__dirname, 'src/main.jsx'),
   },
   context: path.join(__dirname, '.'),
   module: {
@@ -64,15 +64,15 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/template.html',
+      template: path.resolve(__dirname, 'public/template.html'),
     }),
   ],
   devServer: {
     static: './dist',
     proxy: {
       '/api': {
-        // target: 'http://51.158.151.96:8888/',
-        target: 'http://localhost:3000/',
+        target: 'http://51.158.151.96:8888/',
+        // target: 'http://localhost:3000/',
         changeOrigin: true,
         pathRewrite: {
           '^/api': '',
