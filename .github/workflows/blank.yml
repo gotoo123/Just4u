@@ -48,7 +48,8 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            docker pull gotoo123/just4u:dev_webpack
             docker stop just4u
             docker rm just4u
-            docker run --name just4u -d -p 8888:80 gotoo123/just4u:dev_webpack
+            docker rmi gotoo123/just4u:dev_webpack
+            docker pull gotoo123/just4u:dev_webpack
+            docker run --name just4u -d -p 9999:80 gotoo123/just4u:dev_webpack
