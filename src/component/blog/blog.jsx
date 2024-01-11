@@ -1,5 +1,5 @@
 import Markdown from '../markdown/markdown';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import style from './blog.less';
 import ArrowLeft from '../../assets/icon/arrow-left.svg';
 import {useState, useEffect} from 'react';
@@ -7,6 +7,7 @@ import {axiosGet} from "../../api";
 
 const Blog = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const title = location.pathname.replace('/blog/', '');
   const [md, setMd] = useState('');
 
@@ -21,6 +22,7 @@ const Blog = () => {
   })
 
   function backStep() {
+    navigate('/');
   }
 
   return (
