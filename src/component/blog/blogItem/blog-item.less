@@ -6,9 +6,12 @@
   }
 
   .blog-item-wrap {
+    border: 1px solid #4b5267;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    width: 800px;
+    height: 90px;
+    width: 430px;
     margin-bottom: 20px;
     color: var(--fontColor);
     text-decoration: none;
@@ -24,15 +27,19 @@
   .blog-item-wrap:hover {
     color: cornflowerblue;
     cursor: pointer;
+    border-color: cornflowerblue;
   }
 
   .blog-item-wrap .title {
-    font-size: 32px;
+    font-size: 20px;
     margin-bottom: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .blog-item-wrap .intro {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 14px;
   }
 

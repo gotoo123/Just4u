@@ -8,11 +8,11 @@ import {axiosGet} from "../../api";
 const Blog = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const title = location.pathname.replace('/blog/', '');
+  const id = location.pathname.replace('/blog/', '');
   const [md, setMd] = useState('');
 
   useEffect(() => {
-    axiosGet(`/api/note/${title}`)
+    axiosGet(`/api/note/${id}`)
       .then((res) => {
       setMd(res.data);
     })

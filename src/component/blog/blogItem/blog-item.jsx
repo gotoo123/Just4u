@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import style from './blog-item.less';
 
 const BlogItem = (props) => {
-  const { title, desc, intro } = props;
+  const { title, desc, intro, id } = props;
   return (
       <div className={`${style.wrapper}`}>
-        <Link to={`/blog/${title}`}>
+        <Link to={`/blog/${id}`}>
           <div className="blog-item-wrap">
             <div className="title">{title}</div>
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
