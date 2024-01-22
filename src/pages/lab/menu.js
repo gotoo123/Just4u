@@ -6,5 +6,9 @@ export const menu = [
   {
     name: 'wordPaint',
     route: '/lab/wordPaint',
+  },
+  {
+    name: 'day & night',
+    route: '/lab/day-and-night',
   }
 ];
