@@ -8,7 +8,7 @@ WORKDIR /app/client
 COPY . .
 
 # 安装依赖并执行相关操作
-RUN npm install --registry=https://registry.npm.taobao.org && npm run build && rm -rf node_modules
+RUN npm cache clean -f && npm config set strict-ssl false && npm install --registry=https://registry.npm.taobao.org && npm run build && rm -rf node_modules
 
 FROM nginx:alpine
 
