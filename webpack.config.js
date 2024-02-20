@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
   entry: {
     main: path.resolve(__dirname, 'src/main.jsx'),
   },
@@ -67,20 +66,6 @@ module.exports = {
       template: path.resolve(__dirname, 'public/template.html'),
     }),
   ],
-  devServer: {
-    static: './dist',
-    proxy: {
-      '/api': {
-        target: 'http://51.158.151.96:8888/',
-        // target: 'http://localhost:3000/',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/api': '',
-        }
-      }
-    }
-  },
-  devtool: 'inline-source-map',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
