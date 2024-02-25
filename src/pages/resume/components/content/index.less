@@ -1,0 +1,81 @@
+.contentWrapper :global {
+  .intro-content {
+    &-wrapper {
+      padding: 16px 32px 32px;
+      li {
+        list-style-position: inside;
+        font-size: 16px;
+        line-height: 28px;
+        text-align: justify;
+        word-break: break-all;
+        margin: 6px 0;
+      }
+
+      .personal-skills {
+      }
+
+      .work-experience {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        > section {
+          display: flex;
+          grid-gap: 30px;
+          margin-bottom: 12px;
+        }
+
+        .work-period,
+        .work-company {
+          font-size: 17px;
+          font-weight: 600;
+        }
+
+        .work-project {
+          font-size: 16px;
+          font-weight: 600;
+          margin: 10px 0;
+        }
+
+        .work-content {
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+    &-box {
+      margin: 16px 16px 24px;
+      &-header {
+        display: flex;
+        align-items: center;
+
+        &-title {
+          flex-shrink: 0;
+          position: relative;
+          z-index: 1;
+          padding: 0 32px;
+          margin: 0 16px;
+          border-radius: 32px;
+          font-size: 16px;
+          line-height: 32px;
+          text-align: center;
+          color: #474747;
+          background-color: #f1f1f1;
+        }
+
+        &-divider {
+          flex: 1;
+          display: inline-flex;
+          height: 0;
+          border-top: 1px solid #f1f1f1;
+          vertical-align: middle;
+        }
+      }
+
+      &-content {
+        padding: 20px 0;
+      }
+    }
+  }
+}

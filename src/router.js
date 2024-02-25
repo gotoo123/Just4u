@@ -4,6 +4,7 @@ import Lab from './pages/lab/lab';
 import Blog from './component/blog/blog';
 import { router as labRouter } from './pages/lab/router';
 import {Navigate} from "react-router-dom";
+import Resume from "./pages/resume";
 
 const router = [
   {
@@ -13,6 +14,10 @@ const router = [
   {
     path: '/search',
     element: <Search />,
+  },
+  {
+    path: '/resume',
+    element: <Resume/>,
   },
   {
     path: '/lab',
